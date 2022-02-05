@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Button
+    x:Class="TimeTrackerTutorial.Views.Buttons.BindableButton"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    IsEnabled="{Binding IsEnabled}"
+    IsVisible="{Binding IsVisible}"
+    Text="{Binding Text}" />
