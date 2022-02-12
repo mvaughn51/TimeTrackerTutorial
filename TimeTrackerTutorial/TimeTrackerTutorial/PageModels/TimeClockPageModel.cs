@@ -54,7 +54,6 @@ namespace TimeTrackerTutorial.PageModels
             get => _clockInOutButtonModel;
             set => SetProperty(ref _clockInOutButtonModel, value);
         }
-
         private Timer _timer;
         private ObservableCollection<WorkItem> _workItems;
         private IAccountService _accountService;

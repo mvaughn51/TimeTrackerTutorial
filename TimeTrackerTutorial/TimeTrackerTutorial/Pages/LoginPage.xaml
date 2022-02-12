@@ -3,7 +3,9 @@
     x:Class="TimeTrackerTutorial.Pages.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:TimeTrackerTutorial.Views.Buttons"
     xmlns:pagemodels="clr-namespace:TimeTrackerTutorial.PageModels"
+    xmlns:views="clr-namespace:TimeTrackerTutorial.Views"
     x:DataType="pagemodels:LoginPageModel">
     <ContentPage.Content>
         <StackLayout>
@@ -13,7 +15,10 @@
                 IsPassword="True"
                 Placeholder="password"
                 Text="{Binding Password}" />
+            <!--
             <Button Command="{Binding LogInCommand}" Text="Log In" />
+            -->
+            <buttons:BindableButton BindingContext="{Binding LogInModel}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

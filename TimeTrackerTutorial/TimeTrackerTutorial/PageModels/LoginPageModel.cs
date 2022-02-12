@@ -5,6 +5,7 @@ using System.Windows.Input;
 using TimeTrackerTutorial.PageModels.Base;
 using TimeTrackerTutorial.Service.Account;
 using TimeTrackerTutorial.Services.Navigation;
+using TimeTrackerTutorial.ViewModels.Buttons;
 using Xamarin.Forms;
 
 namespace TimeTrackerTutorial.PageModels
@@ -36,14 +37,24 @@ namespace TimeTrackerTutorial.PageModels
         private readonly INavigationService _navigationService;
         private readonly IAccountService _accountService;
 
+        public ButtonModel LogInModel { get; set; }
+
+
         public LoginPageModel(INavigationService navigationService, IAccountService accountService)
         {
             _navigationService = navigationService;
             _accountService = accountService;
 
             // init our Login command
-            LogInCommand = new Command(DoLogInAction);
+//            LogInCommand = new Command(DoLogInAction);
+            LogInModel = new ButtonModel("LOG IN 2", OnLogin);
         }
+
+        private void OnLogin()
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// Perform login validation and navigation if applicable
